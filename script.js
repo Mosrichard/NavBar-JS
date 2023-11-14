@@ -1,22 +1,7 @@
-const btn = document.getElementById('btn');
-const container = document.getElementById('container');
+const emoji = document.getElementById("emoji");
 
+const emojis = ["😂", "🤣", "❤️", "😒", "👌", "😘", "💕", "😁", "😍", "🙌"];
 
-btn.addEventListener('click', () =>{
-    createNotification();
+emoji.addEventListener("mouseover", () => {
+  emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
 });
-
-function createNotification(){
-    const notif = document.createElement('div');
-    notif.classList.add('toast');
-
-    notif.innerText = 'This challange is crazy';
-
-    container.appendChild(notif);
-
-    setTimeout(()=>{
-        notif.remove();
-    }, 5000);
-}
-
-
