@@ -1,7 +1,6 @@
-const emoji = document.getElementById("emoji");
+const sidebar = document.querySelector(".sidebar");
+const btn = document.querySelector("button");
 
-const emojis = ["😂", "🤣", "❤️", "😒", "👌", "😘", "💕", "😁", "😍", "🙌"];
-
-emoji.addEventListener("mouseover", () => {
-  emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+btn.addEventListener("click", () => {
+  sidebar.classList.toggle("hide");
 });
